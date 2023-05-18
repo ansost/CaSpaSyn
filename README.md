@@ -44,7 +44,7 @@
 
 ### Quickstart
 #### Prerequisites
-You need some form of code editor in order to use the code in this repository, for example: Jupyter Notebooks like [VSCode](https://code.visualstudio.com/download), [Jupyter Notebook](https://jupyter.org/install) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/)
+You need some form of code editor in order to use the code in this repository, for example: Jupyter Notebooks like [VSCode](https://code.visualstudio.com/download), [Jupyter Notebook](https://jupyter.org/install) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/).
 If you have none of these installed, go with [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/). 
 
 <!--
@@ -73,7 +73,7 @@ Distributed under the MIT License. See [LICENSE.txt](https://github.com/ansost/C
 - Name, Name. Year. A cool title. In Proceedings of something, pagesx-x, place, country. Publisher.
 
 ```bibtex
-@inproceedings{arora-etal-2022-estimating,
+@inproceedings{authors-etal-year-stichwort,
     title = "CaSpaSyn",
     author = "name1, name2",
     booktitle = "booktitle",

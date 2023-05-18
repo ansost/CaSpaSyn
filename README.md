@@ -5,11 +5,11 @@
 # CaSpaSyn - Results from fieldwork about the syntax of Catalan and Castilian
 <p align="center">
   by 
-    <a href="https://orcid.org/0000-0002-6374-1506">Niklas Wiskandt</a>
+    <a href="https://orcid.org/0000-0002-6374-1506">Niklas N. Wiskandt</a>
     ·
     <a href="mailto:armin.saw@gmail.com">Armin Sawicki</a>
     ·
-    <a href="mailto:sarah.m.graetz@gmail.com">Sarah Grätz</a>
+    <a href="mailto:sarah.m.graetz@gmail.com">Sarah M. Grätz</a>
     ·
     <a href="https://ansost.github.io">Anna S. Stein</a>
     ·

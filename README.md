@@ -39,10 +39,18 @@
 </details>
 
 ## About the Project
+- To which extent do we find variation in Balear Catalan?
+  - Do Balear Catalan differ from Standard Catalan?
+  - Is there an influence of Spanish on Balear Catalan?
+  - What is the role of attitudes concerning the Catalan of Barcelona?
+- Polycentric Variation of Spanish?
+  - Are the islands a centre of Spanish that differs from Standard European Spanish?
+  - Differences according to the origin of the informant (Peninsular, LA, Local)?
+- How to deal with intrasystematic variation?
+  - What are the factors (Causativity, Stativity, etc.)?
+  - Theoretical considerations, formal descriptions?
 
-## Getting Started 
-
-### Quickstart
+## Quickstart
 #### Prerequisites
 You need some form of code editor in order to use the code in this repository, for example: Jupyter Notebooks like [VSCode](https://code.visualstudio.com/download), [Jupyter Notebook](https://jupyter.org/install) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/).
 If you have none of these installed, go with [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/). 

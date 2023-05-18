@@ -11,7 +11,7 @@
     ·
     <a href="mailto:sarah.m.graetz@gmail.com">Sarah Grätz</a>
     ·
-    <a href="https://ansost.github.io">Anna Stein</a>
+    <a href="https://ansost.github.io">Anna S. Stein</a>
     ·
     <a href="mailto:jessica.schamne@hhu.de">Jessica Schamne</a>
     ·

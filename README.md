@@ -13,9 +13,9 @@
     ·
     <a href="https://ansost.github.io">Anna S. Stein</a>
     ·
-    <a href="mailto:jessica.schamne@hhu.de">Jessica Schamne</a>
+    <a href="https://de.linkedin.com/in/jessica-schamne-06334b212">Jessica Schamne</a>
     ·
-    <a href="mailto:addisonblanchardrooney@gmail.com">Addison J. Blanchard-Rooney</a>
+    <a href="https://de.linkedin.com/in/addison-j-blanchard-rooney/de">Addison J. Blanchard-Rooney</a>
   </p>
 </div>
 

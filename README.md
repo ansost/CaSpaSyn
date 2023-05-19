@@ -40,7 +40,9 @@
   </ol>
 </details>
 
-## About the Project Psych-Prädikate in den romanischen Sprachen (Schwerpunkt Spanisch und Katalanisch) / Psych-Predicates in Romance Languages (Focus on Spanish and Catalan) funded by DAAD Hochschuldialog mit Südeuropa 2023
+## Project Psych-Prädikate in den romanischen Sprachen (Schwerpunkt Spanisch und Katalanisch) / Psych-Predicates in Romance Languages (Focus on Spanish and Catalan) funded by DAAD Hochschuldialog mit Südeuropa 2023
+
+Research questions:
 - To which extent do we find variation in Balear Catalan?
   - Do Balear Catalan differ from Standard Catalan?
   - Is there an influence of Spanish on Balear Catalan?

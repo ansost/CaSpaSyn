@@ -103,7 +103,7 @@ Text about Elga & Team
 
 ### DAAD Hochschudialog Südeuropa
 <img src="https://static.daad.de/media/daad_de/der-daad/kommunikation-publikationen/daad_logo_suppl_de+en_h_basic_rgb.png" width=50% height=50%>
-We are grateful to have received funding from the German Academic Exchange Service (DAAD) from the [Hochschuldialog Südeuropa fund](https://www2.daad.de/hochschulen/ausschreibungen/projekte/de/11342-foerderprogramme-finden/?s=1&projektid=57634887)
+We are grateful to have received funding from the German Academic Exchange Service (DAAD) from the <a href="https://www.w3schools.com](https://www2.daad.de/hochschulen/ausschreibungen/projekte/de/11342-foerderprogramme-finden/?s=1&projektid=57634887">Hochschuldialog Südeuropa fund</a>
 
 ### Philosophical Faculty of the HHU
 *Insert Bild here*

@@ -1,0 +1,34 @@
+{
+    "entristecer": {
+        "pronominal": 6,
+        "active": 5.5
+    },
+    "preocupar": {
+        "pronominal": 6.69,
+        "active": 5.75
+    },
+    "sorprender": {
+        "pronominal": 5.95,
+        "active": 6.21
+    },
+    "turbar": {
+        "pronominal": 3.14,
+        "active": 3.5
+    },
+    "espantar": {
+        "pronominal": 5.55,
+        "active": 6.14
+    },
+    "molestar": {
+        "pronominal": 4.17,
+        "active": 5.86
+    },
+    "encantar": {
+        "pronominal": 2.4,
+        "active": 4.11
+    },
+    "divertir": {
+        "pronominal": 6.12,
+        "active": 5.57
+    }
+}

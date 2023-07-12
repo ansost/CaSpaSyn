@@ -1,33 +1,39 @@
 ---
-title: "Acceptabiliy Analysis for Catalan and Spanish Ratings"
+title: '"Acceptabiliy Analysis for Catalan and Spanish Ratings"'
 author: "Anna"
+date: "`r Sys.Date()`"
 output: github_document
 ---
 
-To render, run `#rmarkdown::render(input = "/home/ansost/repos/CaSpaSyn/code/accepatibility-analysis.rmd", output_file = "/home/ansost/repos/CaSpaSyn/data/myfile.html")` in an R environment. 
+**About this document:**
+To render, run `rmarkdown::render(input = "/home/ansost/repos/CaSpaSyn/code/accepatibility-analysis.rmd", output_file = "/home/ansost/repos/CaSpaSyn/data/myfile.html")` in an R environment. 
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## GitHub Documents
-
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
-
-## Including Code
-
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
+```{r include=FALSE}
+install.packages('tidyverse')
+install.packages("devtools")
+library(readr)
 ```
+
+# Data exploration 
+```{r}
+df.initial <- read_csv('data/catalan.csv')
+str(df.initial)
+```
+
+##  Mean Ratings 
+
+### Active Ratings 
+
+### Pronominal Ratings 
+
+### p-Wert
+Zweiseitiger t-Test die erste Idee, um mit einem Alpha von 0,05 zu schauen, ob es signifikante Unterschiede in den Ratings gab.
+
+Später vielleicht: ob jedes Verb für sich signifikante Unterschiede bei Active vs. Pronominal aufweist, aber das kann man ja noch schauen
 
 ## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -5,51 +5,70 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-The following block sets the [working directory](https://bookdown.org/yihui/rmarkdown-cookbook/working-directory.html) for reading in the files. Exchange the part before `/CaSpaSyn/code` with wherever you have the copy of the repository.
-
 ```{r, setup, include=FALSE}
-knitr::opts_knit$set(root.dir = '~/repos/CaSpaSyn/code/')
+# The following line sets the [working directory](https://bookdown.org/yihui/rmarkdown-cookbook/working-directory.html) for reading in the files. 
+# Exchange the part before `/CaSpaSyn/code` with wherever you have the copy of the repository.
+knitr::opts_knit$set(root.dir = "~/repos/CaSpaSyn/code/")
+
+# Don't include warnings and messages in the rendered document.
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
-Install libraries if necessary.
+```{r packages, include=FALSE}
+# Load/install libraries. 
+#install.packages("tidyverse")
+packages <- c("tidyverse", "lubridate", "gridExtra", "car", "namer")
 
-```{r include=FALSE}
-#install.packages('readr')
-#install.packages('car')
-```
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+	install.packages(packages[!installed_packages])
+}
 
-Load libraries.
-
-```{r }
-library(readr)
-library(car)
+invisible(lapply(packages, library, character.only = TRUE))
 ```
 
 # Data Exploration
 
-Load data.
+```{r loadData}
+# Load data.
+df.cat.initial <- read_csv("../data/Catalan_ASSASSMG.csv")
+df.spa.initial <- read_csv("../data/Spanish_ASSASSMG.csv")
 
-```{r}
-df.initial <- read_csv('../data/catalan.csv')
-str(df.initial)
+# Print data overview.
+str(df.cat.initial, give.attr = FALSE, give.length = FALSE, vec.len = 3, max.level = 3, digits.d = 3)
+str(df.spa.initial, give.attr = FALSE, give.length = FALSE, vec.len = 3, max.level = 3, digits.d = 3)
 ```
 
-Deal with NA ratings.
-
-```{r}
-# code here
+```{r dataTreatment, include = FALSE}
+# Make sure that the ratings are treated as numerical data, not strings. 
+df.cat <- transform(df.cat.initial, Rating = as.numeric(Rating))
+df.spa <- transform(df.spa.initial, Rating = as.numeric(Rating))
 ```
 
-Data treatment.
+## Overall Rating Distribution
 
-```{r}
-# code here
+Ratings are very skewed towards the high end of the scale.
+
+```{r ratingBoxplot, echo=FALSE}
+box.spa <- ggplot(df.spa, aes(x=Rating)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=7) + # display all x axis ticks
+    ggtitle("Castilian Ratings")
+
+box.cat <- ggplot(df.cat, aes(x=Rating)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=7) + # display all x axis ticks 
+    ggtitle("Catalan Ratings")
+
+grid.arrange(box.spa, box.cat, ncol=2)
+#ggsave(filename = "../figures/rating_count_distribution.png")
 ```
 
-Boxplot of ratings per scale point.
-
-```{r}
-# code here
+```{r normalityAllRatings, echo=FALSE}
+shapiro.test(df.cat$Rating)
+shapiro.test(df.spa$Rating)
 ```
 
 ## Outlier Inspection
@@ -58,17 +77,91 @@ Boxplot of ratings per scale point.
 
 Plots of rating distribution per participant.
 
-```{r}
-# code here
+#### Catalan
+
+```{r catRatingDist, figures-side, fig.show="hold", out.width="50%", echo = FALSE}
+for (i in c(unique(df.cat$Code))) {
+  subset(df.cat, Code %in% c(unique(df.cat$Code)))
+  temp <- subset(df.cat, Code == i)
+
+  name <- paste("Rating distribution of participant", i, sep = " ")
+  
+  print(ggplot(temp, aes(x=Rating)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=7) + # display all x axis ticks 
+    ggtitle(name))
+  
+  temp <- transform(temp, Rating = as.numeric(Rating))
+}
+```
+
+#### Castilian
+
+```{r spaRatingDist, fig.show="hold", out.width="50%", echo = FALSE}
+for (i in c(unique(df.spa$Code))) {
+  subset(df.cat, Code %in% c(unique(df.spa$Code)))
+  temp <- subset(df.spa, Code == i)
+
+  name <- paste("Rating distribution of participant", i, sep = " ")
+  
+  print(ggplot(temp, aes(x=Rating)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=7) +# display all x axis ticks 
+    ggtitle(name))
+}
 ```
 
 ### Survey Completion Time
 
-Check for completion times 1 standard deviation away from average survey completion time ([source](https://academic.oup.com/poq/article/72/5/914/1832496#28138951)). Extreme outliers could lead to exclusion of the participant(s).
+Check for completion times 1 standard deviation away from average survey completion time ([source](https://academic.oup.com/poq/article/72/5/914/1832496#28138951)).
 
-```{r}
-# code here
+```{r surveytime, results = "hide", echo = FALSE}
+# Make new column with duration in minutes for Catalan and Castilian
+df.cat <- df.cat %>%
+mutate(surveyduration = minute(seconds_to_period(End - Start)))
+df.spa <- df.spa %>%
+mutate(surveyduration = minute(seconds_to_period(End - Start)))
+
+# Subset df for participants
+subjTimes.cat <- df.cat %>% distinct(Code, .keep_all = T) 
+subjTimes.spa <- df.spa %>% distinct(Code, .keep_all = T) 
+
+# Plot
+times.cat <- ggplot(subjTimes.cat, aes(x=surveyduration)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=23) +# display all x axis ticks 
+    ggtitle("Survey durations Catalan")
+
+times.spa <- ggplot(subjTimes.spa, aes(x=surveyduration)) +
+    geom_histogram(binwidth=.5, na.rm = TRUE,
+                   colour="black", fill="white") + 
+    scale_x_continuous(n.breaks=23) +# display all x axis ticks 
+    ggtitle("Survey durations Castilian")
+
+grid.arrange(times.spa, times.cat, ncol=2)
+#ggsave(filename = "../figures/surveydurations.png")
+
+# Find exclusion criteria, usually 1 SD away from the mean, 1.5 sd in brackets
+round(mean(df.cat$surveyduration) + 1.5 *sd(df.cat$surveyduration), 0) # 17 (19)
+round(mean(df.cat$surveyduration) - 1.5 *sd(df.cat$surveyduration), 0) # 10 (8)
+
+round(mean(df.spa$surveyduration) + 1.5 *sd(df.spa$surveyduration), 0) # 19 (21)
+round(mean(df.spa$surveyduration) - 1.5 *sd(df.spa$surveyduration), 0) # 8 (6)
 ```
+
+The strong filter (1 SD from the mean) would exclude over half of the participants, the lax filter (1.5 SD from the mean) much less. 
+
+```{r exclusionTimes, results="hide"}
+nrow(subjTimes.cat %>% filter(surveyduration < 10 | surveyduration > 17)) # 14 out of 25
+nrow(subjTimes.cat %>% filter(surveyduration < 8 | surveyduration > 19)) # 2 out of 25
+
+nrow(subjTimes.spa %>% filter(surveyduration < 8 | surveyduration > 9)) # 21 out of 26
+nrow(subjTimes.spa %>% filter(surveyduration < 6 | surveyduration > 21)) # 3 out of 26
+```
+
 
 ### Rating Development over Time
 
@@ -78,7 +171,7 @@ Check whether participants used more extreme ratings towards the end of the stud
 # code here
 ```
 
-# Comparing Castillian and Catalan verbs in regards to dativ usage
+# Comparing Castilian and Catalan verbs in regards to dativ usage
 
 Test for normal distribution of the ratings using the Shapiro-Wilk normality test (comes with base R).
 
@@ -101,7 +194,7 @@ Compare the Means. (Heißt Wilcox, mach aber Mann-Whitney) If the p-value is bel
 #tapply(df$group1,df$group2,mean)
 ```
 
-# Comparison between Castillian and Catalan Cognates
+# Comparison between Castilian and Catalan Cognates
 
 AA&AI vs. PA&PI, AA&PA vs. AI&PI, PN? (vs. PA oder PI)
 

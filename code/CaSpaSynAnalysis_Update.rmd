@@ -152,7 +152,7 @@ round(mean(df.spa$surveyduration) + 1.5 *sd(df.spa$surveyduration), 0) # 19 (21)
 round(mean(df.spa$surveyduration) - 1.5 *sd(df.spa$surveyduration), 0) # 8 (6), Edit(Armin): 9 (6)
 ```
 
-Sarah: The strong filter (1 SD from the mean) would exclude over half of the participants, the lax filter (1.5 SD from the mean) much less. 
+The strong filter (1 SD from the mean) would exclude over half of the participants, the lax filter (1.5 SD from the mean) much less. 
 Armin: Rounding in lines 148 to 152 will lead to false bounds, such that in the 1SD interval the situation is not as drastic as you described, but for the 1.5SD interval it would not change the excluded participants.
 
 ```{r exclusionTimes, results="hide"}

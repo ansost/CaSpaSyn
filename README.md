@@ -43,7 +43,7 @@ Each of the folders contains a `code` and a `data` folder containing the respect
 ## Getting the code and data
 To get the whole data and code, clone the repository using [git](https://git-scm.com/)
 ```sh
-git clone git@github.com:ansost/informativity_pilot.git
+git@github.com:ansost/CaSpaSyn.git
 ```
 or [download it as a zip archive](https://github.com/ansost/CaSpaSyn/archive/refs/heads/main.zip).
 You can also download the individual files and folders directly. 

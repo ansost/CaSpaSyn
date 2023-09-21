@@ -36,7 +36,7 @@
 </details>-->
 
 
-This repository features the code and data of the projects with a quantitative analysis. The `acceptability study` presents results on acceptability ratings of pronominal and active constructions for psych verbs in Catalan and Spanish. The `scetch study` presents results from prompt written elicitation of psych verbs in Catalan and Spanish. An abstract, slides and more information can be found in the README of the respective folders.
+This repository features the code and data of the projects with a quantitative analysis. The [**Acceptability Study**](https://github.com/ansost/CaSpaSyn/tree/b68816d030e458fb4fe3a9fa65e3677559b944bf/acceptability_study) presents results on acceptability ratings of pronominal and active constructions for psych verbs in Catalan and Spanish. The [**Scetch Study**](https://github.com/ansost/CaSpaSyn/tree/b68816d030e458fb4fe3a9fa65e3677559b944bf/scetch_study) presents results from prompt written elicitation of psych verbs in Catalan and Spanish. An abstract, slides and more information can be found in the README of the respective folders.
 Each of the folders contains a `code` and a `data` folder containing the respective files for the project. 
 > There is a HTML file of the analysis to facilitate reading. 
 
@@ -91,4 +91,4 @@ We are very grateful to **Elga Cremades** and her team for their continued suppo
 We are also grateful to have received funding from the **German Academic Exchange Service (DAAD)** from the <a href="https://www.w3schools.com](https://www2.daad.de/hochschulen/ausschreibungen/projekte/de/11342-foerderprogramme-finden/?s=1&projektid=57634887">Hochschuldialog Südeuropa fund</a> and from QVM Mittel from the **Philosophical Faculty of the Heinrich Heine University**.
 
 # License
-Distributed under the MIT License. See [LICENSE.txt](https://github.com/ansost/CaSpaSyn/blob/main/LICENSE) for more information.
+Distributed under the CC BY-NC 4.0 License. See [LICENSE](https://github.com/ansost/CaSpaSyn/blob/main/LICENSE) for more information.

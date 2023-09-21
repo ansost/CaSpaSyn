@@ -88,7 +88,7 @@ We are very grateful to **Elga Cremades** and her team for their continued suppo
 ### DAAD Hochschudialog Südeuropa
 <img src="https://static.daad.de/media/daad_de/der-daad/kommunikation-publikationen/daad_logo_suppl_de+en_h_basic_rgb.png" width=20% height=20%><img src="image.png" width=19% height=19%>
 
-We are also grateful to have received funding from the **German Academic Exchange Service (DAAD)** from the <a href="https://www.w3schools.com](https://www2.daad.de/hochschulen/ausschreibungen/projekte/de/11342-foerderprogramme-finden/?s=1&projektid=57634887">Hochschuldialog Südeuropa fund</a> and from QVM Mittel from the **Philosophical Faculty of the Heinrich Heine University**.
+We are also grateful to have received funding from the **German Academic Exchange Service (DAAD)** from the <a href="https://www2.daad.de/hochschulen/ausschreibungen/projekte/de/11342-foerderprogramme-finden/?s=1&projektid=57634887">Hochschuldialog Südeuropa fund</a> and from QVM Mittel from the **Philosophical Faculty of the Heinrich Heine University**.
 
 # License
 Distributed under the CC BY-NC 4.0 License. See [LICENSE](https://github.com/ansost/CaSpaSyn/blob/main/LICENSE) for more information.

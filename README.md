@@ -1,6 +1,6 @@
 [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-# CaSpaSyn - Results from fieldwork about the syntax of Catalan and Castilian
+# CaSpaSyn - Results from fieldwork on the syntax of Catalan and Castilian
   by 
     <a href="https://orcid.org/0000-0002-6374-1506">Niklas N. Wiskandt</a>
     ·
@@ -69,7 +69,7 @@ You need to have [R](https://cran.r-project.org/) and [RStudio](https://posit.co
 ```
 -->
 
-# About the project\
+# About the project
 Within the framework of a university research excursion in cooperation with the departments of romance languages and general linguistics, we sought to explore the morphosyntactic parameters surrounding object experiencer predicates in Spanish and Catalan on Mallorca. Three separate studies were conducted, collecting data from nearly 200 participants recruited at the Universitat de les Illes Balears and individually at other locations across the island. 
 The excursion was funded by DAAD Hochschuldialog mit Südeuropa 2023 and is a cooperation between the Heinrich Heine University Düsseldorf and the University of the Balearic Islands. Across all sub-projects the students conducted filedwork concerning several research questions: 
 - To which extent do we find variation in Balear Catalan?

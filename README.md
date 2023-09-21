@@ -69,8 +69,9 @@ You need to have [R](https://cran.r-project.org/) and [RStudio](https://posit.co
 ```
 -->
 
-# About the project
-In May 2023 a group of students from the Romance and the Linguistics department had the opportunity to conduct field work Mallorca concerning psych-predicates in Romance Languages (Focus on Spanish and Catalan). The trip was funded by DAAD Hochschuldialog mit Südeuropa 2023 and is a cooperation between the Heinrich Heine University Düsseldorf and the University of the Balearic Islands. Across all sub-projects the students conducted filedwork concerning several research questions: 
+# About the project\
+Within the framework of a university research excursion in cooperation with the departments of romance languages and general linguistics, we sought to explore the morphosyntactic parameters surrounding object experiencer predicates in Spanish and Catalan on Mallorca. Three separate studies were conducted, collecting data from nearly 200 participants recruited at the Universitat de les Illes Balears and individually at other locations across the island. 
+The excursion was funded by DAAD Hochschuldialog mit Südeuropa 2023 and is a cooperation between the Heinrich Heine University Düsseldorf and the University of the Balearic Islands. Across all sub-projects the students conducted filedwork concerning several research questions: 
 - To which extent do we find variation in Balear Catalan?
   - Do Balear Catalan differ from Standard Catalan?
   - Is there an influence of Spanish on Balear Catalan?

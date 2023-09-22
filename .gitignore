@@ -1,1 +1,6 @@
+# Ignore venv
 syntaxV/
+
+# Ignore . files
+acceptability_study/code/.RData
+acceptability_study/code/.Rhistory

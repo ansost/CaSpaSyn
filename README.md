@@ -93,3 +93,5 @@ We are also grateful to have received funding from the **German Academic Exchang
 
 # License
 Distributed under the CC BY-NC 4.0 License. See [LICENSE](https://github.com/ansost/CaSpaSyn/blob/main/LICENSE) for more information.
+
+#### For questions or concerns regarding this repository please [contact the maintainer](mailto:anna.stein@hhu.de).

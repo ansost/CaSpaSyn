@@ -4,8 +4,6 @@
   by 
     <a href="https://orcid.org/0000-0002-6374-1506">Niklas N. Wiskandt</a>
     ·
-    <a href="https://orcid.org/0000-0002-8795-2121">Rolf Kailuweit</a>
-    ·
     <a href="mailto:armin.saw@gmail.com">Armin Sawicki</a>
     ·
     <a href="mailto:sarah.m.graetz@gmail.com">Sarah M. Grätz</a>
